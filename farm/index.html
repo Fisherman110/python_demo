@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>清新农场</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="farm-board" aria-label="农场区域">
+      <header class="farm-header">
+        <div>
+          <p class="eyebrow">Fresh Farm</p>
+          <h1>清新农场</h1>
+        </div>
+        <div class="money-card" aria-live="polite">
+          <span>金币</span>
+          <strong id="money">$50</strong>
+        </div>
+      </header>
+
+      <div class="skyline" aria-hidden="true">
+        <span class="cloud cloud-one"></span>
+        <span class="cloud cloud-two"></span>
+        <span class="sun"></span>
+      </div>
+
+      <div id="plots" class="plots" aria-label="农田分块"></div>
+
+      <p id="status" class="status" aria-live="polite">
+        欢迎来到农场！先在商店购买种子，再点击农田播种。
+      </p>
+    </section>
+
+    <aside class="side-panel" aria-label="商店和背包">
+      <section class="panel-card selected-card">
+        <p class="panel-label">当前选择</p>
+        <h2 id="selectedSeed">胡萝卜种子</h2>
+        <p id="selectedHint">购买种子后，点击空农田即可播种。</p>
+      </section>
+
+      <section class="panel-card">
+        <div class="panel-title-row">
+          <h2>商店菜单</h2>
+          <span>Seeds</span>
+        </div>
+        <div id="shop" class="shop-list"></div>
+      </section>
+
+      <section class="panel-card">
+        <div class="panel-title-row">
+          <h2>背包</h2>
+          <span>Bag</span>
+        </div>
+        <div id="inventory" class="inventory"></div>
+      </section>
+
+      <div class="action-row">
+        <button id="sellAll" class="primary-button">出售所有作物</button>
+        <button id="resetGame" class="ghost-button">重新开始</button>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
